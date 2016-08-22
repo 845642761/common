@@ -149,7 +149,7 @@ public class HttpClientUtil {
 		if(fileMap == null)
 			return httpPost;
 		
-		 MultipartEntityBuilder multiEntityBuilder = MultipartEntityBuilder.create();
+		MultipartEntityBuilder multiEntityBuilder = MultipartEntityBuilder.create();
 		for (Entry<String, File> entry : fileMap.entrySet()) {
 			multiEntityBuilder.addPart(entry.getKey(), new FileBody(entry.getValue(), ContentType.APPLICATION_OCTET_STREAM));
 		}
